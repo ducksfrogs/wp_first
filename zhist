@@ -1,0 +1,18 @@
+: 1724365800:0;git add .
+: 1724365808:0;git commit -m "first commit "
+: 1724365814:0;git push origin main
+: 1724365829:0;docker container stop 1a933f085b5c 5db9a48f4e04 phpmyadmin_ingrid
+: 1724365846:0;docker container rm 1a933f085b5c 5db9a48f4e04 phpmyadmin_ingrid
+: 1724365850:0;ls
+: 1724365857:0;docker-compose up -d
+: 1724365863:0;ls
+: 1724365923:0;git add .
+: 1724366261:0;chmod 888
+: 1724366269:0;chmod 777 html/*
+: 1724366273:0;sudo chmod 777 html/*
+: 1724366744:0;sudo rm -rf html
+: 1724366749:0;git status
+: 1724366751:0;ls
+: 1724366773:0;touch .gitignore
+: 1724366779:0;vi .gitignore
+: 1724366817:0;cp ~/.zsh_history zhist
