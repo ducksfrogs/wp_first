@@ -1,0 +1,14 @@
+# dependencies
+node_modules
+bower_components
+
+tmp
+# compiled output
+/.tmp
+
+# System Files
+.DS_Store
+Thumbs.db
+./dist
+prod/
+
