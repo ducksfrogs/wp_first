@@ -9,3 +9,7 @@ License URI:
 Tags:
 Text Domain: <Theme_Text_Domain>
 */
+
+body {
+    color: green;
+}

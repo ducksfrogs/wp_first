@@ -1,3 +1,5 @@
+<h1>This is the header area.</h1>
+<?php get_header(   ); ?>
 <?php
     while(have_posts()) {
         the_post(); ?>
@@ -7,3 +9,6 @@
         <?php
     }
     ?>
+
+<h3>footer area.</h3>
+<?php get_footer(   ); ?>
