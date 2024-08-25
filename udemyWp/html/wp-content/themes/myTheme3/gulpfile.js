@@ -13,46 +13,18 @@ const connect = require('gulp-connect');
 // const browsersync = require('browser-sync');
 
 const paths = {
-    'htmls': {
-        'base': 'src/',
-        'src': 'src/index.html',
-        'dest': 'dist',
-        'watch': 'src/*.html',
-    },
     'styles': {
         'base': 'src/styles',
         'src': 'src/styles/main.scss',
-        'dest': 'dist/styles',
+        'dest': 'asset/styles',
         'watch': 'src/styles/**/*scss',
    },
    'scripts': {
     'base': 'src/scripts',
     'src': 'src/scripts/**/*.js',
-    'dest': 'dist/scripts/',
+    'dest': 'asset/scripts/',
     'watch': 'src/scripts/**/*.js',
    },
-};
-
-const server = function() {
-    connect.server({
-        root: 'dist',
-        livereload: true
-    });
-    // browsersync.create();
-    // browsersync.init({
-    //     server: {
-    //         baseDir: "./dist"
-    //     }
-    // });
-};
-
-const htmls = function() {
-    return gulp.src(
-        paths.htmls.src,{
-            'base': paths.htmls.base,
-        }).pipe(
-            gulp.dest(paths.htmls.dest)
-        ).pipe(connect.reload());
 };
 
  const styles = function() {
@@ -96,10 +68,6 @@ const scripts = function() {
 
 const watch = function() {
     gulp.watch(
-        paths.htmls.watch,
-        htmls
-    );
-    gulp.watch(
         paths.scripts.watch,
         scripts
     );
@@ -112,8 +80,6 @@ const watch = function() {
 const build = gulp.parallel(
     styles,
     scripts,
-    htmls,
-    server,
     gulp.series(watch),
 );
 
