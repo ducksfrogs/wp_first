@@ -1,0 +1,17 @@
+{
+  "name": "mytheme2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "css-declaration-sorter": "^7.2.0",
+    "gulp": "^5.0.0",
+    "gulp-babel": "^8.0.0"
+  }
+}
