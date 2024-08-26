@@ -13,7 +13,7 @@ const connect = require('gulp-connect');
 const paths = {
     'styles': {
         'base': 'src/styles',
-        'src': 'src/styles/main.scss',
+        'src': '/src/styles/main.scss',
         'dest': '/styles',
         'watch': 'src/styles/**/*scss',
    },

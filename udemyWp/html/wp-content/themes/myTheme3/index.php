@@ -1,13 +1,4 @@
 <?php get_header(   ); ?>
-<?php
-    while(have_posts()) {
-        the_post(); ?>
-        <h2> <a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-        <?php the_content(); ?>
-        <hr>
-        <?php
-    }
-    ?>
 
     <div class="page-banner">
       <div class="page-banner__bg-image" style="background-image: url(images/library-hero.jpg)"></div>
