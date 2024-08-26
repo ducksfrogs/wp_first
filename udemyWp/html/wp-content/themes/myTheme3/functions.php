@@ -8,3 +8,9 @@ function univ_files() {
     // wp_enqueue_style( 'univ_extra_style', get_theme_file_uri( '/asset/styles/style_ectra.css' ));
 }
 add_action( 'wp_enqueue_scripts', 'univ_files' );
+
+
+function univ_features() {
+    add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'univ_features' );

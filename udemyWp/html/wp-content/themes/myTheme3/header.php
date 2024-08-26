@@ -4,7 +4,7 @@
     <?php wp_head(  ); ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><?php the_title(  ); ?></title>
 </head>
 <body>
     <header class="site-header">
@@ -17,7 +17,7 @@
         <div class="site-header__menu group">
           <nav class="main-navigation">
             <ul>
-              <li><a href="#">About Us</a></li>
+              <li><a href="<?php echo site_url( '/about-us' ) ?>">About Us</a></li>
               <li><a href="#">Programs</a></li>
               <li><a href="#">Events</a></li>
               <li><a href="#">Campuses</a></li>
