@@ -1,4 +1,5 @@
 themes/*
 !myTheme
 !myTheme3
+!themeJ
 !.gitignore
