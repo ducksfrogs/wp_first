@@ -11,7 +11,7 @@
         MYSQL_PASSWORD: password # WordPress用データベース接続パスワード
      WordPress:
       image: wordpress:latest
-      container_name: wordpress
+      container_name: wordpress2
       restart: always
       depends_on:
          - db
@@ -27,7 +27,7 @@
          - ./html:/var/www/html
      phpmyadmin:
       image: phpmyadmin/phpmyadmin:latest
-      container_name: phpmyadmin_ingrid
+      container_name: phpmyadmin_ingrid2
       restart: always
       depends_on:
          - db
