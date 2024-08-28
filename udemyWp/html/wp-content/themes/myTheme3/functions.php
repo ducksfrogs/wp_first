@@ -18,6 +18,8 @@ add_action( 'wp_enqueue_scripts', 'univ_files' );
 
 
 function univ_features() {
+
+    register_nav_menu('headerMemuLocation', "HEader Memu Location");
     add_theme_support( 'title-tag' );
 }
 add_action( 'after_setup_theme', 'univ_features' );
