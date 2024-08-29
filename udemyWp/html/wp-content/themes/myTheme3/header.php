@@ -18,9 +18,9 @@
           <nav class="main-navigation">
             <?php 
             //  wp_nav_menu(array(
-             //   'depth' => 1,
-              //  'theme_location' => 'headerMenuLocation'
-              //));
+            //    'depth' => 1,
+            //    'theme_location' => 'headerMenuLocation'
+            //   ));
            ?>
             <ul>
               <li <?php if (is_page( 'about-us' ) or wp_get_post_parent_id( 0 ) == 5 ) echo 'class="current-menu-item"' ?> ><a href="<?php echo site_url( '/about-us' ) ?>">About Us</a></li>
