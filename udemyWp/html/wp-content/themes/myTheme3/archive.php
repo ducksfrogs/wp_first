@@ -4,23 +4,27 @@ get_header(  );
     <div class="page-banner">
       <div class="page-banner__bg-image" style="background-image: url(images/library-hero.jpg)"></div>
       <div class="page-banner__content container t-center c-white">
-        <h1 class="headline headline--large"><?php if (is_category(  )) {
-            single_cat_title(  );
-        } if (is_author(  ) ){
-            echo "Post by " ; the_author(  );
-        }  ?></h1>
-        <h2 class="headline headline--medium">We think you&rsquo;ll like it here.</h2>
-        <h3 class="headline headline--small">Why don&rsquo;t you check out the <strong>major</strong> you&rsquo;re interested in?</h3>
+        <h1 class="page-banner_title">
+          <?php 
+            the_archive_title(  );
+            // if (is_category( )) {
+            // single_cat_title(  );
+            // } if (is_author(  ) ){
+            // echo "Post by " ; the_author(  );
+            // } 
+         ?>
+        </h1>
+        <div class="page-banner__intro">
+          <p><?php the_archive_description(  ); ?> </p>
+        </div>
         <a href="#" class="btn btn--large btn--blue">Find Your Major</a>
       </div>
     </div>
 
     <div class="container container--narrow page-section">
-
       <?php
         while(have_posts(  )) {
           the_post( ); ?>
-
           <div class="post-item">
             <h2><a href="<?php the_permalink(  ); ?>"><?php the_title(  ) ?></a></h2>
             <div class="meta-box">
