@@ -11,10 +11,11 @@ get_header(  );
       </div>
     </div>
 
-    <div class="container container--narrow">
+    <div class="container container--narrow page-section">
+
       <?php
         while(have_posts(  )) {
-          the_post(  ); ?>
+          the_post( ); ?>
 
           <div class="post-item">
             <h2><a href="<?php the_permalink(  ); ?>"><?php the_title(  ) ?></a></h2>
@@ -23,15 +24,13 @@ get_header(  );
             </div>
             <div class="generic-content">
               <?php the_excerpt(  ); ?>
-              <p><a class = 'btn btn--blue" href="<?php the_parmalink(); ?>">Contine readeng</a></p>
+              <p><a class = "btn btn--blue" href="<?php the_permalink(); ?>">Contine readeng</a></p>
             </div>
           </div>
 
-      <?php
-
-        };
+      <?php };
+      echo paginate_links(  );
       ?>
-
     </div>
 
 <?php
