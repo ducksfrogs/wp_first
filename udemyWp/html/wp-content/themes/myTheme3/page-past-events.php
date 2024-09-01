@@ -8,7 +8,6 @@ get_header(  );
         <div class="page-banner__intro">
           <p>A recap of our past events.</p>
         </div>
-        <a href="#" class="btn btn--large btn--blue">Find Your Major</a>
       </div>
     </div>
 
@@ -17,6 +16,7 @@ get_header(  );
 
             $today = date('Ymd');
             $pastEvents = new WP_Query(array(
+              'paged' => get_query_var('paged', 1),
               'post_type' => 'event',
               'meta_key' => 'event_date',
               'orderby' => 'meta_value_num',
@@ -31,10 +31,6 @@ get_header(  );
               )
             )
             );
-
-            // $pastEvents = new WP_Query(array(
-            //   'post_type' => 'event'
-            // ));
 
             while ($pastEvents -> have_posts(  )) {
              $pastEvents -> the_post(); ?>
@@ -56,7 +52,9 @@ get_header(  );
             </div>
           </div>
       <?php };
-      echo paginate_links(  );
+      echo paginate_links( array(
+        'total' => $pastEvents->max_num_pages
+      ) );
       ?>
     </div>
 
