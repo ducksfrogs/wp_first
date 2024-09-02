@@ -19,16 +19,35 @@
           <a class="metabox__blog-home-link" href="<?php echo get_post_type_archive_link('event');  ?>"><i class="fa fa-home" aria-hidden="true"></i>Event Home</a> 
           <span class="metabox__main">
             <?php the_title(); ?>
-          </span>
-        </p>
+          </span> </p>
       </div>
-    </div>
 
-    <div class="generic-content">
+      <div class="generic-content"> <?php the_content(  ); ?> </div>
+
       <?php
-        the_content(  );
+
+        $relatedPrograms = get_field('related_programs');
+        // print_r($relatedPrograms)
+        if ($relatedPrograms) {
+          echo '<hr class="is-horizontal>';
+          echo '<h2 class=""> Related Program(s) <h2>';
+          echo '<ul class="">';
+        foreach($relatedPrograms as $program) { ?>
+
+
+          <li><a href=""><?php echo get_the_title($program); ?></a></li>
+
+          <?php
+        }
+          echo '</ul>';
+
+
+        }
+
       ?>
+    
     </div>
+    
 <?php
     }
     get_footer(  );
